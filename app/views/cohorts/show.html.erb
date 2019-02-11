@@ -14,14 +14,22 @@
     <% end %>
     <br>
   
-    <h4><strong>
+    <h4><strong>Cohorts
     </h4></strong><br>
     <strong><%= @cohort.name %></strong>
     <br>
       Start: <%= @cohort.start_date %><br>
       End: <%= @cohort.end_date %><br>
       Teacher: <%= @cohort.teacher.teacher_full_name %><br>
-      Course: <%= @cohort.course.name %><br><br>
+      Course: <%= @cohort.course.name %><br>
+
+      Students: <br>
+      <% @cohort.students.each do |t| %>
+      <a href="/students/<%= t.id %>">
+      <%= t.first_name %> 
+      <%= t.last_name %>
+      </a><br>
+    <% end %>
     <br><br>
 
     <%= link_to "Back", :back %>

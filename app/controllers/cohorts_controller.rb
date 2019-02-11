@@ -31,9 +31,7 @@ class CohortsController < ApplicationController
   end
 
   def destroy
-  @cohort = Cohort.find(params[:id])
   Cohort.destroy(params[:id])
-  @cohort.destroy
   redirect_to cohorts_path
   end
 
