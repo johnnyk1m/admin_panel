@@ -84,4 +84,8 @@ development:
   
 #
 production:
+  <<: *default
+  database: panel
+  username: postgres
+  password: <%= ENV["POSTGRESQL"]%>
     url: <%= ENV['DATABASE_URL'] %>
