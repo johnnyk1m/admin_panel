@@ -1,0 +1,26 @@
+<center>
+<div class="card">
+  <div class="card-body">
+    <%= form_for(@teacher) do |form| %>
+    <label> First name</label><br>
+    <%= form.text_field :first_name %> <br>
+
+    <label> Last name</label><br>
+    <%= form.text_field :last_name %> <br>
+
+    <label> Age</label><br>
+    <%= form.number_field :age %> <br>
+
+    <label> Salary</label><br>
+    <%= form.number_field :salary %> <br>
+
+    <label> Education Level</label><br>
+    <%= form.select :education, ["", "Highschool Diploma", "Bachelor's Degree", "Master's Degree", "Ph.D"]%><br><br>
+
+    <%= form.submit "Add Teacher", {class: "btn btn-success"} %><br><br>
+
+    <%= link_to "Back", :back %>
+    <% end %>
+  </div>
+</div>
+

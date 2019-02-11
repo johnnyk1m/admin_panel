@@ -1,0 +1,30 @@
+<center>
+<div class="card">
+  <div class="card-body">
+
+    <%= link_to edit_cohort_path do %>
+    <button type="button" class="btn btn-dark">
+    Edit Cohort
+    </button>
+    <% end %>
+    <%= link_to cohort_path(@cohort), method: :delete  do %>
+    <button type="button" class="btn btn-danger">
+    Delete Cohort
+    </button>
+    <% end %>
+    <br>
+  
+    <h4><strong>
+    </h4></strong><br>
+    <strong><%= @cohort.name %></strong>
+    <br>
+      Start: <%= @cohort.start_date %><br>
+      End: <%= @cohort.end_date %><br>
+      Teacher: <%= @cohort.teacher.teacher_full_name %><br>
+      Course: <%= @cohort.course.name %><br><br>
+    <br><br>
+
+    <%= link_to "Back", :back %>
+  </div>
+</div>
+</center>

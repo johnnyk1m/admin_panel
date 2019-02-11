@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Add New Cohort</h3>  
+      <%= form_for(@cohort) do |form| %>
+
+      <label>Cohort Name</label><br>
+      <%= form.text_field :name %> <br>
+
+      <label>Start End</label><br>
+      <%= form.date_field :start_date %> <br>
+
+      <label>End Date</label><br>
+      <%= form.date_field :end_date %> <br><br>
+
+      <label>Select Students</label><br>
+
+      <%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true, class: 'chosen-select'} %> <br>
+
+      <label>Select Teacher</label><br>
+      <%= collection_select(:cohort, :teacher_id, Teacher.all, :id, :teacher_full_name, {include_blank: true}) %><br>
+
+      <label>Select Course</label><br>
+      <%= form.select(:course_id, Course.all.collect{ |course| ["#{course.id}: #{course.name}"]},{include_blank: true })%>
+      <br><br>
+
+      <%= form.submit "Add Cohort", {class: "btn btn-success"} %>
+      <br><br>
+      
+      <%= link_to "Back", :back %>
+
+      <% end %>
+  </div> 
+</div>

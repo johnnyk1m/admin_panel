@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <%= link_to new_teacher_path do %>
+    <button type="button" class="btn btn-dark">
+    Add Teacher
+    </button>
+    <% end %><br>
+
+    <h2 class="card-title">Teachers</h2>
+
+    <% @teacher.each do |t| %>
+      <a href="/teachers/<%= t.id %>">
+      <%= t.first_name %>
+      <%= t.last_name %>
+      </a><br>
+    <% end %>
+    
+    <%= link_to "Back", :back %>
+  </div>
+</div>
+
+
+

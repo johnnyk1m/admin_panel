@@ -1,0 +1,44 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: url("bg-logo.png") no-repeat center center fixed;
+  // background-size: cover;
+  background-color: #391847;
+  animation: fadeIn 1.5s forwards; 
+  color: #f4dbd8;
+
+  a {
+    color: #ffd447;
+  }
+  a:hover {
+    text-decoration: none;
+    color: darkgoldenrod;
+  }
+  color: #FFF;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+
+.card {
+  border-radius: 1.5rem;
+  background-color: rgba(26, 6, 44, 0.95);
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+}

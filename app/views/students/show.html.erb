@@ -1,0 +1,32 @@
+<center>
+<div class="card">
+  <div class="card-body">
+
+    <%= link_to edit_student_path do %>
+    <button type="button" class="btn btn-dark">
+    Edit Profile
+    </button>
+    <% end %>
+    
+    <%= link_to student_path(@student), method: :delete  do %>
+    <button type="button" class="btn btn-danger">
+    Delete Student
+    </button>
+    <% end %>
+    <br>
+  
+    <h4><strong>
+    <%= @student.first_name %>
+    <%= @student.last_name %>
+    </h4></strong><br>
+    <strong>Age: </strong>
+    <%= @student.age %><br>
+    <strong>Education: </strong>
+    <%= @student.education %>
+    <br><br>
+
+    <%= link_to "Back", :back %>
+  </div>
+</div>
+</center>
+

@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-body">
+    <%= link_to new_course_path do %>
+    <button type="button" class="btn btn-dark">
+    Add Course
+    </button>
+    <% end %><br>
+
+    <h2 class="card-title">Courses</h2>
+    
+    <% @course.each do |t| %>
+      <a href="/courses/<%= t.id %>">
+      <%= t.name %></a><br>
+      Total(hrs): <%= t.hours %><br><br>
+    <% end %>
+
+    <%= link_to "Back", :back %>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <%= link_to new_cohort_path do %>
+    <button type="button" class="btn btn-dark">
+    Add Cohort
+    </button>
+    <% end %><br>
+
+    <h2 class="card-title">Cohorts</h2>
+
+    <% @cohort.each do |c| %>
+      <a href="/cohorts/<%= c.id %>">
+      <%= c.name %></a><br>
+      Start: <%= c.start_date %><br>
+      End: <%= c.end_date %><br>
+      Teacher: <%= c.teacher.teacher_full_name %><br>
+      Course: <%= c.course.name %><br><br>
+    <% end %>
+    
+  <%= link_to "Back", :back %>
+  </div>
+</div>
+

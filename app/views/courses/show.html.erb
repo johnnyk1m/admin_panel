@@ -1,0 +1,26 @@
+<center>
+<div class="card">
+  <div class="card-body">
+
+    <%= link_to edit_course_path do %>
+    <button type="button" class="btn btn-dark">
+    Edit Course
+    </button>
+    <% end %>
+    <%= link_to course_path(@course), method: :delete  do %>
+    <button type="button" class="btn btn-danger">
+    Delete Course
+    </button>
+    <% end %><br>
+  
+    <h4><strong>
+    </h4></strong><br>
+    <strong><%= @course.name %></strong>
+    <br>
+    Duration(hrs): <%= @course.hours %><br>
+    <br><br>
+
+    <%= link_to "Back", :back %>
+  </div>
+</div>
+</center>

@@ -1,0 +1,63 @@
+
+<center><h1>UU Dashboard</h1></center>
+
+<div class="dashboard">
+
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Teachers</h2>
+      <% @teacher.each do |t| %>
+      <a href="/teachers/<%= t.id %>">
+      <%= t.first_name %>
+      <%= t.last_name %></a><br>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Students</h2>
+      <% @student.each do |t| %>
+        <a href="/students/<%= t.id %>">
+        <%= t.first_name %> 
+        <%= t.last_name %></a><br>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Courses</h2>
+      <% @course.each do |t| %>
+      <a href="/courses/<%= t.id %>">
+      <%= t.name %></a><br>
+      Total(hrs): <%= t.hours %>
+      <br><br>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Cohorts</h2>
+      <% @cohort.each do |t| %>
+      <a href="/courses/<%= t.id %>">
+      <%= t.name %></a><br>
+      <% end %>
+    </div>
+  </div>
+
+<%# closing "dashboard" div %>
+</div>
+
+<center>
+<div class="card center" style="width: 18rem;">
+ <div class="card-body">
+    <h4 class="card-title">
+    Contact admin </h4>
+    <a href="mailto:admin@panel.com">
+    admin@panel.com
+    </a><br>
+  </div>
+</div>
+</center>

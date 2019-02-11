@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Admin</h2>
+
+    <p><%= link_to edit_user_registration_path, :class => 'navbar-link' do %><button type="button" class="btn btn-dark">Edit Admin</button>
+    <% end %>
+    </p>
+
+    <% @user.each do |t| %>
+      <%= t.id %>: 
+      <%= t.email %><br>
+    <% end %>
+
+  </div>
+</div>

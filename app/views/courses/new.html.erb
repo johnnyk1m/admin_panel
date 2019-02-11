@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Add New Course</h3>
+  
+      <%= form_for(@course) do |c| %>
+
+      <label> Course Name</label><br>
+      <%= c.text_field :name %><br>
+
+      <label>Duration in hours</label><br>
+      <%= c.number_field :hours %><br><br>
+
+      <%= c.submit "Create Course", {class: "btn btn-success"} %>
+
+      <% end %>
+  </div>
+</div>

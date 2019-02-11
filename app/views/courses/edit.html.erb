@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-body">
+
+    <h3 class="card-title">Edit Course</h3>
+      <%= form_for(@course) do |c| %>
+
+      <label> Course Name</label><br>
+      <%= c.text_field :name %><br>
+
+      <label>Duration(hours)</label><br>
+      <%= c.number_field :hours %><br>
+
+      <%= c.submit "Save", {class: "btn btn-success" }%>
+      <% end %>
+      <br>
+      <%= link_to "Back", :back %>
+  </div>
+</div>

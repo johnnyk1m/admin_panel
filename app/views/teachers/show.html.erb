@@ -1,0 +1,34 @@
+<center>
+<div class="card">
+  <div class="card-body">
+
+    <%= link_to edit_teacher_path do %>
+    <button type="button" class="btn btn-dark">
+    Edit Profile
+    </button>
+    <% end %>
+    <%= link_to teacher_path(@teacher), method: :delete  do %>
+    <button type="button" class="btn btn-danger">
+    Delete Teacher
+    </button>
+    <% end %><br>
+    
+    <h2><strong>
+    <%= @teacher.first_name %>
+    <%= @teacher.last_name %>
+    </strong></h2>
+    <h4>
+    <strong>Age: </strong>
+    <%= @teacher.age %><br>
+    <strong>Salary: $ </strong>
+    <%= @teacher.salary %><br>
+    <strong>Education: </strong>
+    <%= @teacher.education %>
+    </h4><br><br>
+
+    <%= link_to "Back", :back %>
+
+  </div>
+</div>
+</center>
+
