@@ -61,7 +61,7 @@ end
 #Flexible authentication solution for Rails with Warden.
 gem 'devise', '~> 4.2'
 
-gem 'twitter-bootstrap-rails', '~> 4.0'
+# gem 'twitter-bootstrap-rails', '~> 4.0'
 
 gem 'sentry-raven'
 
