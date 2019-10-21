@@ -59,7 +59,7 @@ group :test do
 end
 
 #Flexible authentication solution for Rails with Warden.
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 
 # gem 'twitter-bootstrap-rails', '~> 4.0'
 
